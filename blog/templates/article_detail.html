@@ -1,0 +1,10 @@
+{% load humanize %}
+<center>
+    <div class="article" >
+        <a href="{% url 'blog:article_detail' article.slug %}">{{ article.title }}</a>
+        <p>{{ article.published_at | naturaltime}}</p>
+        <br>
+        <img src="{{ article.thumbnail.url }}" alt="{{ article.title }}" style="width:400px" />
+        <p></p>
+    </div>
+</center>
